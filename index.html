@@ -22,45 +22,47 @@
             <a href="Contato.html">Contato</a>
         </nav>
     </header>
-   <main class="Ranger-preta">
-    <section class="slider">
-        <input type="radio" name="btn-radio" id="radio1" checked>
-        <input type="radio" name="btn-radio" id="radio2">
-        <input type="radio" name="btn-radio" id="radio3">
+    <main class="Ranger-preta">
+        <section class="slider">
+            <input type="radio" name="btn-radio" id="radio1" checked>
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
 
-        <div class="slider-carrossel">
-            <div class="slider-box">
-                <img src="img/imagem_1.jpg" alt="Ford ranger preta">
+            <div class="slider-carrossel" id="Carousel">
+                <div class="slider-box">
+                    <img src="img/imagem_1.jpg" alt="Ford ranger preta">
+                </div>
+                <div class="slider-box">
+                    <img src="img/imagem_2.jpg" alt="imagemDeEpoca">
+                </div>
+                <div class="slider-box">
+                    <img src="img/imagem_3.jpg" alt="imagemBronco">
+                </div>
             </div>
-            <div class="slider-box">
-                <img src="img/imagem_2.jpg" alt="imagemDeEpoca">
-            </div>
-            <div class="slider-box">
-                <img src="img/imagem_3.jpg" alt="imagemBronco">
-            </div>
-        </div>
 
-        <div class="nav-auto">
-            <div class="setas seta-1">
-                <label for="radio3" class="prev">&#10094;</label>
-                <label for="radio2" class="prox">&#10095;</label>
+            <div class="nav-auto">
+                <div class="setas seta-1">
+                    <label for="radio3" class="prev">&#10094;</label>
+                    <label for="radio2" class="prox">&#10095;</label>
+                </div>
+                <div class="setas seta-2">
+                    <label for="radio1" class="prev">&#10094;</label>
+                    <label for="radio3" class="prox">&#10095;</label>
+                </div>
+                <div class="setas seta-3">
+                    <label for="radio2" class="prev">&#10094;</label>
+                    <label for="radio1" class="prox">&#10095;</label>
+                </div>
             </div>
-            <div class="setas seta-2">
-                <label for="radio1" class="prev">&#10094;</label>
-                <label for="radio3" class="prox">&#10095;</label>
-            </div>
-            <div class="setas seta-3">
-                <label for="radio2" class="prev">&#10094;</label>
-                <label for="radio1" class="prox">&#10095;</label>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <p class="DescricaoDaImagem">
-        Esta é a nova ford ranger 2022. Confira as novidades
-        <a href="Lançamento.html">aqui</a>.
-    </p>
-</main>
+        <p class="DescricaoDaImagem" id="carousel-title">
+            Esta é a nova ford ranger 2022. Confira as novidades <a href="Lançamento.html">aqui</a>.
+        </p>
+    </main>
+
+    <script src="js/carousel.js"></script>
+
     <footer class="Rodape">
         <div class="RedesSociais">
             <p>
