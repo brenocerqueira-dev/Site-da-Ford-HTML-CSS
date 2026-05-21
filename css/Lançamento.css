@@ -230,7 +230,6 @@ main {
 .Carro1,
 .Carro2,
 .Carro3 {
-
     width: 400px;
     text-align: center;
     background: white;
@@ -240,6 +239,9 @@ main {
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
+
+    /* animação */
+    transition: transform 0.7s ease;
 }
 
 .Carro1,
@@ -254,8 +256,6 @@ main {
 .Carro2:hover,
 .Carro3:hover {
     transform: translateY(-25px);
-    transition: all 0.12s ease;
-    /* TEMPO DE SUBIDA DA ANIMAÇÃO */
 }
 
 .botaoComparar {
@@ -302,7 +302,6 @@ main {
     gap: 12px;
     justify-content: center;
     margin: 0 11% 0 0;
-
 }
 
 .video {
@@ -338,6 +337,137 @@ main {
     margin: 0;
 }
 
+ul.modelcars {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+ul.modelcars li {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+    vertical-align: top;
+}
+
+img.photocar {
+    display: block;
+    width: 250px;
+}
+
+.infocar div {
+    display: inline-block;
+}
+
+.info {
+    width: 200px;
+    vertical-align: top;
+}
+
+.textmodel {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #1b357e;
+}
+
+.textprice {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+td:nth-child(1) {
+    font-weight: 700;
+    width: 40%;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+div#compare {
+    /* Faz a janela flutuar de forma fixa no centro da tela do navegador */
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Faz com que ele fique por cima de qualquer elemento (como o vídeo do YouTube) */
+    z-index: 9999;
+    height: auto;
+    max-height: 92vh;
+    overflow-y: auto;
+
+    width: 55vw;
+    max-width: 760px;
+    min-width: 520px;
+
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+div#compare table {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+div#compare table img.photocar {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto;
+}
+
+div#compare th,
+div#compare td {
+    padding: 10px 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.container-botao-fechar {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+div#compare .botao-fechar {
+    display: inline-block;
+    height: 42px;
+    width: 200px;
+    background-color: #1b357e;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: none;
+}
+
+div#compare .botao-fechar:hover {
+    background-color: #1351d8;
+    /* Tom luminoso no efeito*/
+}
 @media (max-width: 1150px) {
     .video {
         width: 90%;
@@ -345,7 +475,6 @@ main {
         aspect-ratio: 16 / 9;
         margin-bottom: 30px;
     }
-
 }
 
 @media (max-width: 768px) {
@@ -377,7 +506,6 @@ main {
 
     .Carros {
         flex-direction: column;
-        /* Empilha os carros */
         align-items: center;
         gap: 30px;
     }
@@ -386,7 +514,6 @@ main {
     .Carro2,
     .Carro3 {
         width: 90%;
-        /* Ocupa 90% da largura da tela */
         max-width: 320px;
     }
 
@@ -404,9 +531,7 @@ main {
     .copyright {
         margin: 0;
         order: 3;
-        /* Coloca o texto por último no empilhamento */
     }
-
 }
 
 @media (max-width: 600px) {
