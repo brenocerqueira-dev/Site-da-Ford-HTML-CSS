@@ -18,7 +18,6 @@ class Car {
     }
 }
 
-// Procura no array se o carro já existe. Retorna a posição (índice) ou -1 se não encontrar
 function GetCarArrPosition(arr, carClass) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].nome === carClass.nome)
@@ -42,7 +41,6 @@ function SetCarToCompare(el, carClass) {
     }
 }
 
-// Exibe a seção de comparação e valida tudo apenas na hora do clique do botão
 function ShowCompare() {
     if (carArr.length < 2) {
         alert("É necessário marcar pelo menos 2 carros para apresentar a comparação.");
@@ -75,6 +73,6 @@ function UpdateCompareTable() {
         document.getElementById(`compare_potencia_${i}`).innerText = carro.potencia;
         document.getElementById(`compare_volumecacamba_${i}`).innerText = carro.volumeCacamba;
         document.getElementById(`compare_roda_${i}`).innerText = carro.roda;
-        document.getElementById(`compare_preco_${i}`).innerText = carro.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        document.getElementById(`compare_preco_${i}`).innerText = carro.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
     }
 }

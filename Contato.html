@@ -32,23 +32,28 @@
         </div>
 
 
-        <form class="formulario"> <!-- FORMULÁRIO -->
+        <form class="formulario" onsubmit="event.preventDefault(); Post(this); Enviar();this.reset();">
             <h2>Sobre Você</h2>
 
-            <input type="text" placeholder="Nome" required pattern="[A-Za-zÀ-ÿ\s]+"
+            <input type="text" id="nomeid" name="nome" placeholder="Nome" required pattern="[A-Za-zÀ-ÿ\s]+"
                 title="O nome deve conter apenas letras.">
-            <!--Essa gosma vai Permitir apenas letras (A-Z), letras com acentos (À-ÿ) e espaços-->
-            <input type="text" placeholder="Sobrenome" required pattern="[A-Za-zÀ-ÿ\s]+"
-                title="O sobrenome deve conter apenas letras.">
-            <input type="email" placeholder="E-mail" required>
-            <input type="text" placeholder="CPF" inputmode="numeric" pattern="\d*" title="Digite apenas números">
-            <input type="text" placeholder="Telefone" inputmode="numeric" pattern="\d*" title="Digite apenas números">
+<!--Essa gosma vai Permitir apenas letras (A-Z), letras com acentos (À-ÿ) e espaços-->
 
-            <select required>
+            <input type="text" id="sobrenomeid" name="sobrenome" placeholder="Sobrenome" required pattern="[A-Za-zÀ-ÿ\s]+"
+                title="O sobrenome deve conter apenas letras.">
+
+            <input type="email" name="email" placeholder="E-mail" required>
+
+            <input type="text" name="cpf" placeholder="CPF" inputmode="numeric" pattern="\d*" title="Digite apenas números">
+
+            <input type="text" name="telefone" placeholder="Telefone" inputmode="numeric" pattern="\d*" title="Digite apenas números">
+
+
+            <select name="contato" required>
                 <option value="">Tipo de contato</option>
-                <option>Elogio</option>
-                <option>Reclamação</option>
-                <option>Sugestão</option>
+                <option value="Elogio">Elogio</option>
+                <option value="Reclamação">Reclamação</option>
+                <option value="Sugestão">Sugestão</option>
 
             </select>
 
@@ -56,6 +61,9 @@
         </form>
 
     </main>
+
+    <script src="js/form.js"></script>
+
     <footer class="Rodape">
         <div class="RedesSociais">
             <p>
