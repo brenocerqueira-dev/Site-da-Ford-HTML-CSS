@@ -37,16 +37,18 @@
 
             <input type="text" id="nomeid" name="nome" placeholder="Nome" required pattern="[A-Za-zÀ-ÿ\s]+"
                 title="O nome deve conter apenas letras.">
-<!--Essa gosma vai Permitir apenas letras (A-Z), letras com acentos (À-ÿ) e espaços-->
+            <!--Essa gosma vai Permitir apenas letras (A-Z), letras com acentos (À-ÿ) e espaços-->
 
-            <input type="text" id="sobrenomeid" name="sobrenome" placeholder="Sobrenome" required pattern="[A-Za-zÀ-ÿ\s]+"
-                title="O sobrenome deve conter apenas letras.">
+            <input type="text" id="sobrenomeid" name="sobrenome" placeholder="Sobrenome" required
+                pattern="[A-Za-zÀ-ÿ\s]+" title="O sobrenome deve conter apenas letras.">
 
             <input type="email" name="email" placeholder="E-mail" required>
 
-            <input type="text" name="cpf" placeholder="CPF" inputmode="numeric" pattern="\d*" title="Digite apenas números">
+            <input type="text" name="cpf" placeholder="CPF" inputmode="numeric" pattern="\d*"
+                title="Digite apenas números">
 
-            <input type="text" name="telefone" placeholder="Telefone" inputmode="numeric" pattern="\d*" title="Digite apenas números">
+            <input type="text" name="telefone" placeholder="Telefone" inputmode="numeric" pattern="\d*"
+                title="Digite apenas números">
 
 
             <select name="contato" required>
@@ -56,6 +58,7 @@
                 <option value="Sugestão">Sugestão</option>
 
             </select>
+            <textarea name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
             <button type="submit">Enviar</button>
         </form>

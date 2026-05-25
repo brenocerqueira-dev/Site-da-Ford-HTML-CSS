@@ -1,23 +1,23 @@
-// array que armazena
+// array que armazena os dados do carrossel
 let carouselArr = [
     {
         Image: "img/imagem_1.jpg",
-        Title: "Esta é a nova ford ranger 2022. Confira as novidades",
+        Title: "Esta é a nova Ranger Ford 2022. Verifique novidades",
         Url: "Lançamento.html"
     },
     {
         Image: "img/imagem_2.jpg",
-        Title: "Conheça a nossa história de inovação e tradição de época",
-        Url: "Lançamento.html"
+        Title: "Ford a nossa história",
+        Url: "#"
     },
     {
         Image: "img/imagem_3.jpg",
-        Title: "Descubra a potência e o design do novo Ford Bronco",
+        Title: "Nova Ford Bronco Sport 2022",
         Url: "Lançamento.html"
     }
 ];
 
-// Classe obrigatoria do desafio
+// Classe obrigatória do desafio
 class Carousel {
     static _sequence = 0;
     static _size = 0;
@@ -28,14 +28,16 @@ class Carousel {
             if (arr.length > 0) {
                 Carousel._sequence = 0;
                 Carousel._size = arr.length;
-                Carousel.Next(); // Executa o primeiro imediatamente
+                Carousel.Next();
+
 
                 Carousel._interval = setInterval(function () { Carousel.Next(); }, 4000);
+
+                Carousel.ConfigurarManual();
             }
-        } /* else {
-            throw "Method Start need a Array Variable.";
-        } */
+        }
     }
+
 
     static Next() {
         let dadosAtual = carouselArr[Carousel._sequence];
@@ -49,13 +51,41 @@ class Carousel {
             radioCorrespondente.checked = true;
         }
 
-        // 4. Incrementa o contador para a próxima imagem
+        // incrementa o contador para a próxima imagem
         Carousel._sequence++;
 
-        // Se chegar ao fim do array, volta para a primeira imagem (0)
+        // se chegar ao fim do array, volta para a primeira imagem (0)
         if (Carousel._sequence >= Carousel._size) {
             Carousel._sequence = 0;
         }
+    }
+
+    static ResetarEIrPara(index) {
+        // para imediatamente a contagem automática antiga
+        clearInterval(Carousel._interval);
+
+        Carousel._sequence = index;
+
+        let dadosAtual = carouselArr[Carousel._sequence];
+        let boxTexto = document.getElementById("carousel-title");
+        if (boxTexto) {
+            boxTexto.innerHTML = `${dadosAtual.Title} <a href="${dadosAtual.Url}">aqui</a>.`;
+        }
+
+        Carousel._sequence++;
+        if (Carousel._sequence >= Carousel._size) {
+            Carousel._sequence = 0;
+        }
+
+        Carousel._interval = setInterval(function () { Carousel.Next(); }, 4000);
+    }
+    static ConfigurarManual() {
+        let radios = document.querySelectorAll('input[name="btn-radio"]');
+        radios.forEach(function (radio, index) {
+            radio.addEventListener('change', function () {
+                Carousel.ResetarEIrPara(index);
+            });
+        });
     }
 }
 

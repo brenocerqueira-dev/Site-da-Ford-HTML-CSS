@@ -233,12 +233,16 @@ body {
     padding: 10px;
     border-radius: 20px;
     border: 1px solid #ccc;
+    font-family: "DM Sans", sans-serif;
 }
 
-/* TEXTO DA AREA */
 textarea {
     resize: none;
     height: 80px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "DM Sans", sans-serif;
 }
 
 /* BOTÃO */

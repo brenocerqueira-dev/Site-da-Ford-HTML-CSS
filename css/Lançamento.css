@@ -269,16 +269,16 @@ main {
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-     transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
+
 .botaoComparar:hover {
-    animation: slide-fwd-center 0.5s cubic-bezier(
-        0.250,
-        0.460,
-        0.450,
-        0.940
-    ) both;
+    animation: slide-fwd-center 0.5s cubic-bezier(0.250,
+            0.460,
+            0.450,
+            0.940) both;
 }
+
 @keyframes slide-fwd-center {
     0% {
         transform: translateZ(0) scale(1);
@@ -412,6 +412,7 @@ td:nth-child(1) {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+
 div#compare {
     /* Faz a janela flutuar de forma fixa no centro da tela do navegador */
     position: fixed;
@@ -432,13 +433,12 @@ div#compare {
     padding: 30px 25px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.35);
 }
+
 div#compare {
-    transition: transform 0.9s cubic-bezier(
-        0.250,
-        0.460,
-        0.450,
-        0.940
-    );
+    transition: transform 0.9s cubic-bezier(0.250,
+            0.460,
+            0.450,
+            0.940);
 }
 
 div#compare:hover {
@@ -465,6 +465,7 @@ div#compare td {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
+
 .container-botao-fechar {
     text-align: center;
     padding-bottom: 10px;
@@ -490,6 +491,7 @@ div#compare .botao-fechar:hover {
     background-color: #1351d8;
     /* Tom luminoso no efeito*/
 }
+
 @media (max-width: 1150px) {
     .video {
         width: 90%;
