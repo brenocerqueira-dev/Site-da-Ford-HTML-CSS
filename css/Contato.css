@@ -149,7 +149,7 @@ body {
 }
 
 .Logo_da_Ford img {
-    width: 80%
+    width: 80%;
 }
 
 .Navegamento {
@@ -207,6 +207,7 @@ body {
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding: 40px 0;
 }
 
 /* IMAGEM */
@@ -238,7 +239,7 @@ body {
 
 textarea {
     resize: none;
-    height: 80px;
+    height: 50px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 20px;
@@ -254,6 +255,7 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: 0.4s;
+    margin-bottom: 10px;
 }
 
 /*EFEITO DAORA(HOVER)*/
@@ -269,6 +271,36 @@ button:hover {
     justify-content: center;
     margin: 0 11% 0 0;
 
+}
+
+/* (LGPD) */
+.Termos_Condicoes {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+.checkbox-linha {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+.checkbox-linha a {
+    color: #1b357e;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* btn desabilitado */
+button:disabled {
+    background-color: #a0aab5; /* Tom cinza apagado */
+    color: #e0e0e0;
+    cursor: not-allowed; /* muda o ponteiro do mouse para um sinal de block */
+    transform: none !important; /* desativa o efeito de zoom do Hover enquanto estiver travado */
 }
 
 /* Media Query para Celulares (telas até 768px) */

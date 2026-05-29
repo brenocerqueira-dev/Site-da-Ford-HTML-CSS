@@ -33,3 +33,28 @@ function Enviar() {
         alert('Obrigado sr(a) ' + nome.value + '' + sobrenome.value + ' os seus dados foram encaminhados com sucesso!');
     }
 }
+//LGPD
+document.addEventListener("DOMContentLoaded", function () {
+    const checkboxTermos = document.getElementById("termos");
+    const btnEnviar = document.getElementById("btnEnviar");
+
+    if (checkboxTermos && btnEnviar) {
+        
+        function alternarBotao() {
+            // Se a caixinha dos termos estiver marcada
+            if (checkboxTermos.checked) {
+                btnEnviar.disabled = false; 
+            } 
+            // Se não estiver marcada
+            else {
+                btnEnviar.disabled = true; 
+            }
+        }
+
+        // Escuta o clique do usuário no checkbox
+        checkboxTermos.addEventListener("change", alternarBotao);
+
+        // Executa uma vez ao carregar a página
+        alternarBotao();
+    }
+});
